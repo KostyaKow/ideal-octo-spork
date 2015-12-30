@@ -98,7 +98,6 @@
       });
    </script> -->
 
-
    <!-- filter with substring
    <div ng-app='kk' ng-controller='kkctrl'>
       <input type='text' ng-model='test'>
@@ -118,7 +117,23 @@
          ];
       });
    </script>
+   -->
 
+   <div ng-app='kkApp' ng-controller='kkCtrl'>
+      
+   </div>
+
+   <script>
+      url = 'http://forty7.guru/assmilk'
+
+      var app = angular.module('kkApp', []);
+      app.controller('kkCtrl', function ($scope, $http) {
+         $http.get(url).then(function(response) {
+            alert(response.data);
+         });
+
+      });
+   </script>
 
 </body>
 </html>
