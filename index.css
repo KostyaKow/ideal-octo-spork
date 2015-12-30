@@ -1,6 +1,7 @@
 
 body {
    top-margin:       0px;
+   font-family:      Ubuntu, sans-serif;
 }
 
 #panel {
@@ -9,17 +10,31 @@ body {
    /*border-style:     solid;*/
 }
 
-#word-onering {
-   top:              0px;
-   margin:           5px;
-   color:            #fe9542;
+#messanger-img {
    float:            left;
 }
+
+#branding {
+   width:            15%;
+   float:            left;
+}
+
+#word-onering {
+   font-size:        150%;
+   color:            #fe9542;
+   float:            right;
+
+}
+
+#word-by-icloak {
+   float:            right;
+}
+
 #word-messenger-chat {
+   padding-top:      10px;
+   padding-left:     10px;
    color:            #117F98;
    float:            left;
-   margin-left:      14px;
-   margin-top:       5px;
 }
 
 #word-by {
