@@ -54,7 +54,7 @@
       </ul>
    </div> -->
 
-   <!-- ng-show (validating e-mails)
+   <!-- ng-show (validating e-mails). also watch for watching variables
    <style>
       input.ng-invalid {
          background-color: lightblue;
@@ -119,21 +119,63 @@
    </script>
    -->
 
+   <!-- node request, sorting table last or country
+   <style>
+      table, th , td {
+         border: 1px solid grey;
+         border-collapse: collapse;
+         padding: 5px;
+      }
+      table tr:nth-child(odd) {
+         background-color: #f1f1f1;
+      }
+      table tr:nth-child(even) {
+         background-color: #ffffff;
+      }
+   </style>
    <div ng-app='kkApp' ng-controller='kkCtrl'>
-      
+      Country or Last Name: <input type='checkbox' ng-model='orderByLast'>
+      </br></br>
+
+      <table style='border: 1px solid black'>
+         <tr>
+            <th>First name</th><th>Last name</th><th>Country</th>
+         </tr>
+         can also use ng-if, ng-hide and ng-show !stuff
+         <tr ng-show='orderByLast' ng-repeat='x in names | orderBy : "last"'>
+            <td>{{x.first}}</td>
+            <td>{{x.last}}</td>
+            <td>{{x.country}}</td>
+         </tr>
+         <tr ng-hide='orderByLast' ng-repeat='x in names | orderBy : "country"'>
+            <td>{{x.first}}</td>
+            <td>{{x.last}}</td>
+            <td>{{x.country}}</td>
+         </tr>
+
+      </table>
+      <ul>
+         <li ng-repeat='x in names'>
+            {{ x.first + ' ' + x.last + ' ' + x.country }} 
+         </li>
+      </ul> 
    </div>
 
    <script>
       url = 'http://forty7.guru/assmilk'
+      //url = 'http://forty7.guru:6969'
 
       var app = angular.module('kkApp', []);
       app.controller('kkCtrl', function ($scope, $http) {
          $http.get(url).then(function(response) {
-            alert(response.data);
+            $scope.names = response.data; 
          });
-
+         $scope.orderByCountry = false; 
+         $scope.$watch('orderByLast', function () {
+            $scope.orderByCountry = !$scope.orderByLast;
+         });
       });
-   </script>
+   </script> -->
 
 </body>
 </html>

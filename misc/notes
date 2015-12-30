@@ -1,8 +1,11 @@
 #http://www.w3schools.com/angular/angular_directives.asp
 http://www.w3schools.com/angular/angular_controllers.asp
 http://jsfiddle.net/tru1m3ue/4/#run
-http://www.w3schools.com/angular/angular_filters.asp
-http://www.w3schools.com/angular/angular_tables.asp
+
+Only one haven't covered so far:
+http://www.w3schools.com/angular/angular_validation.asp
+http://www.w3schools.com/angular/angular_w3css.asp
+including stuff: http://www.w3schools.com/angular/angular_includes.asp
 
 view        = HTML
 model       = data available for current view $scope
@@ -15,6 +18,7 @@ controllers = control AngularJS application
 directives = ng-directives
    extends HTML attributes
 
+   ng-include     = include other html file
    ng-controller  = defines controller
    ng-app         = defines AngularJS application
                   = if set on div, it becomes owner of application
@@ -22,12 +26,16 @@ directives = ng-directives
                   = bind value of HTML controls to name given
    ng-bind        = binds app data to HTML view.
                   = binds innerHTML to name
-   ng-repeat      = repeats tag (ng-repeat='x in names')
-
-   ng-show        = only show in certain cases
-                     ng-show='myForm.myAddress.$error.email
+   ng-click       = onclick "count = count + 1"
    ng-init        = initializes stuff
-
+   ng-repeat      = repeats tag (ng-repeat='x in names')
+                     $index = index of loop $odd $even
+   ng-if          = only do something if
+   ng-show        = only show in certain cases
+                     ng-show='myForm.myAddress.$error.email'
+                     ng-show='hour > 12'
+   ng-hide        = hides stuff
+   ng-disabled    = for buttons and stuff
    custom directives can be restricted
          E = element name
          A = Attribute
@@ -37,6 +45,7 @@ directives = ng-directives
 expressions (also called data-binding expression)
    same as ng-bind (binds data to HTML)
 
+   $even $odd $index
    filters {{ lastName | uppercase }}
       currency
       filter #subSet of array
@@ -54,6 +63,8 @@ expressions (also called data-binding expression)
       ='points=[1, 2, 3]'
 
 js
+   object = angular.copy(otherObject); 
+   lowercase(); uppercase(), isString(), isNumber()
    //[] can be used for dependent modules
    //without [], you are retrieving existing module
    var app = angular.module(ngAppName, [])
