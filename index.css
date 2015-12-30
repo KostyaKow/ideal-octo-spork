@@ -1,0 +1,29 @@
+
+body {
+   top-margin:       0px;
+}
+
+#panel {
+   height:           10%;
+   width:            100%;
+   /*border-style:     solid;*/
+}
+
+#word-onering {
+   top:              0px;
+   margin:           5px;
+   color:            #fe9542;
+   float:            left;
+}
+#word-messenger-chat {
+   color:            #117F98;
+   float:            left;
+   margin-left:      14px;
+   margin-top:       5px;
+}
+
+#word-by {
+   clear:            both;
+   display:          inline-block;
+   float:            none;
+}
