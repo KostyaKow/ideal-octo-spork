@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+   <!-- <div ng-app="" ng-init="name='john';var2='blah'">
+      <p>Name : <input type="text" ng-model="name"></p>
+      <h1>Hello {{name}}</h1>
+      <p>{{ 5+5 }}</p>
+      <p ng-bind='name + var2'></p>
+   </div> -->
+
+   <!-- controller
+   <div ng-app="MyApp2" ng-controller='MyCtrl'>
+      First : <input type='text' ng-model='First'>
+      Last  : <input type='text' ng-model='Last'>
+      <p> {{ fullName() }} </p>
+   </div>
+   <script>
+      var app = angular.module('MyApp2', []);
+      app.controller('MyCtrl', function($scope) {
+         $scope.First = 'Bob'
+         $scope.Last = 'Marley'
+         $scope.fullName = function() {
+            return $scope.First + " " + $scope.Last;
+         }
+      });
+   </script> -->
+
+   <!-- custom directives
+   <div ng-app="appa" test-directive></div>
+   can also use
+      <test-directive></test-directive>
+      <div class='test-directive'></div>
+      comment: directive: test-directive
+   <script>
+      var app = angular.module("appa", []);
+      app.directive("testDirective", function() {
+         return {
+            restrict : "A", //can only be invoked by attributes
+            template : "Test directive text"
+         };
+      });
+   </script> -->
+
+   <!-- ng-repeat
+   <div ng-app='' ng-init="names=['Felipe', 'Hugo', 'Ilea']">
+      <input typ='text' ng-model='names[0]'>
+
+      <ul>
+         <li ng-repeat='x in names'>
+            {{ x }}
+         </li>
+      </ul>
+   </div> -->
+
+   <!-- ng-show (validating e-mails)
+   <style>
+      input.ng-invalid {
+         background-color: lightblue;
+      }
+   </style>
+   <form ng-app='kApp' name='kForm' ng-controller='kCtrl' ng-init="blah='test'">
+      <input type='email' name='kAddr' ng-model='text'>
+      <span ng-show='kForm.kAddr.$error.email'>Bad e-mail</span> </br>
+      is valid {{kForm.kAddr.$valid}} </br>
+      has been changed {{kForm.kAddr.$dirty}} </br>
+      onBlur (touch) {{kForm.kAddr.$touched}} </br>
+   </form>
+   <script>
+      var app = angular.module('kApp', []);
+
+      app.controller('kCtrl', function($scope) {
+         //alert($scope.blah);
+         $scope.$watch('blah', function () {
+            console.log($scope.blah);
+         });
+      });
+   </script> -->
+
+   <!-- filters (orderBy) list
+   <div ng-app='kk' ng-controller='kkctrl' ng-init='blah=5'>
+      {{blah | currency}}
+      <ul>
+         <li ng-repeat="x in people | orderBy: 'last'">
+            {{ x.last + ', ' + x.first }}
+         </li>
+      </ul>
+   </div>
+   <script>
+      var app = angular.module('kk', []);
+      app.controller('kkctrl', function($scope) {
+         $scope.people = [
+            {'first':'Kostya', 'last':'Kovalskyy'},
+            {'first':'Helen', 'last':'Cabanillas'},
+            {'first':'Tony', 'last':'Klimov'},
+         ];
+      });
+   </script> -->
+
+
+   <!-- filter with substring
+   <div ng-app='kk' ng-controller='kkctrl'>
+      <input type='text' ng-model='test'>
+      <ul>
+         <li ng-repeat='x in people | filter:test | orderBy: "last"'>
+            {{ (x.first | uppercase) + ', ' + x.last }}
+         </li>
+      </ul>
+   </div>
+   <script>
+      var app = angular.module('kk', []);
+      app.controller('kkctrl', function($scope) {
+         $scope.people = [
+            {'first':'Kostya', 'last':'Kovalskyy'},
+            {'first':'Helen', 'last':'Cabanillas'},
+            {'first':'Tony', 'last':'Klimov'},
+         ];
+      });
+   </script>
+
+
+</body>
+</html>
+
+

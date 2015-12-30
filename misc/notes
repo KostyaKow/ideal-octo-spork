@@ -1,4 +1,70 @@
+#http://www.w3schools.com/angular/angular_directives.asp
 http://www.w3schools.com/angular/angular_controllers.asp
 http://jsfiddle.net/tru1m3ue/4/#run
 http://www.w3schools.com/angular/angular_filters.asp
 http://www.w3schools.com/angular/angular_tables.asp
+
+view        = HTML
+model       = data available for current view $scope
+controller  = javascript stuff that changes things
+
+modules     = define AngularJS applications.
+            = angular.module('ng-app-name')
+controllers = control AngularJS application
+
+directives = ng-directives
+   extends HTML attributes
+
+   ng-controller  = defines controller
+   ng-app         = defines AngularJS application
+                  = if set on div, it becomes owner of application
+   ng-model       = binds HTML controls (input, textarea, select) to app data.
+                  = bind value of HTML controls to name given
+   ng-bind        = binds app data to HTML view.
+                  = binds innerHTML to name
+   ng-repeat      = repeats tag (ng-repeat='x in names')
+
+   ng-show        = only show in certain cases
+                     ng-show='myForm.myAddress.$error.email
+   ng-init        = initializes stuff
+
+   custom directives can be restricted
+         E = element name
+         A = Attribute
+         C = class
+         M = comment
+
+expressions (also called data-binding expression)
+   same as ng-bind (binds data to HTML)
+
+   filters {{ lastName | uppercase }}
+      currency
+      filter #subSet of array
+      orderBy
+      lowercase uppercase
+
+   {{ 5 + 5 }}
+   {{ person.lastName }}
+   {{ points[2] }}
+   ng-bind
+      ="points[2]", etc.
+   ng-init
+      ='firstName="John"'
+      ="person{firstName:'John', lastName:'Doe'}"
+      ='points=[1, 2, 3]'
+
+js
+   //[] can be used for dependent modules
+   //without [], you are retrieving existing module
+   var app = angular.module(ngAppName, [])
+   $scope = local scope; $rootScope = global app scope
+   app.controller('blah', function ($scope, $rootScope) {})
+
+css
+   input.ng-invalid {}
+   ng-empty ng-non-empty
+   ng-touched ng-untouched
+   ng-valid ng-invalid
+   ng-dirty
+   ng-pending
+   ng-pristine
