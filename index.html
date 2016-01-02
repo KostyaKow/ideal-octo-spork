@@ -6,7 +6,7 @@
    <script src='index.js'></script>
    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
 </head>
-<body>
+<body ng-app='messanger'>
 
 <nav id='panel'>
    <img id='messanger-img' src='imgs/icon.jpg'></img>
@@ -25,6 +25,17 @@
    </div>
 </nav>
 
+<div id='messanger' ng-controller='messages'>
+   <table>
+      <tr ng-repeat="x in chat">
+         <td style='color: {{x.color}}'>
+            {{ x.name }} :
+         </td> 
+         <td>{{ x.msg  }}</td>
+      </tr>
+   </table>
+
+</div>
 
 </body>
 </html>
