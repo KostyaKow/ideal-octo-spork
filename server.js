@@ -1,32 +1,19 @@
-/*//Lets require/import the HTTP module
-var http = require('http');
-
-//Lets define a port we want to listen to
-const PORT=6969; 
-
-//We need a function which handles requests and send response
-function handleRequest(request, response){
-    //response.end('It Works!! Path Hit: ' + request.url);
-    //console.log(response);
-    //response.end("{'kostya':}");
-}
-
-//Create a server
-var server = http.createServer(handleRequest);
-
-
-//Lets start our server
-server.listen(PORT, function(){
-   //Callback triggered when server is successfully listening. Hurray!
-   console.log("Server listening on: http://localhost:%s", PORT);
-});
-*/
-
+//npm install express
+//npm install --save body-parser
+var fs = require('fs');
 var express = require('express');
 var app = express();
 
+var bodyParser = require('body-parser');
+app.use(bodyParser.json());
+/*app.use(bodyParser.urlencoded({
+   extended: true
+}));*/
+
 app.get('/assmilk', function(req, res) {
    res.set('Access-Control-Allow-Origin', '*');
+
+   console.log(req);
 
    response = [
       {'first':'Helen', 'last':'Cabanillas', 'country':'Peru'},
@@ -38,6 +25,16 @@ app.get('/assmilk', function(req, res) {
 
    res.send(200, response);
 });
+
+function onErr(err) {
+   if (err) console.log(err);
+}
+
+app.post('/assmilk', function(req, res) {
+   console.log(req.body);
+   fs.writeFile('/tmp/test', req.body, onErr);
+});
+
 app.listen(6969);
 
 

@@ -1,3 +1,4 @@
+server = 'http://forty7.guru/assmilk'
 
 function Chatter(name, color) {
    this.name = name;
@@ -14,7 +15,7 @@ function Chatter(name, color) {
 
 var app = angular.module('messanger', []);
 
-app.controller('messages', function($scope) {
+app.controller('messages', function($scope, $http) {
 
    var p1 = new Chatter('KungfuNinja', '#E96B20');
    var p2 = new Chatter('slowCheeta', '#46AEFB');
@@ -38,6 +39,11 @@ app.controller('messages', function($scope) {
       msg = p1.mkMsg($scope.messageValue); 
       $scope.messageValue = '';
       $scope.chat.push(msg);
+      //$http.get(url).then(function(response))
+      function onPost(res) {
+         alert(response);
+      }
+      $http.post(server, {'msg':msg}).then(onPost);
    }
 
 });
