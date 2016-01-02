@@ -26,7 +26,7 @@
 </nav>
 
 <div id='messanger' ng-controller='messages'>
-   <table>
+   <table id='message-container'>
       <tr ng-repeat="x in chat">
          <td style='color: {{x.color}}'>
             {{ x.name }} :
