@@ -17,7 +17,6 @@ body {
 }
 
 #branding {
-   width:            12%;
    float:            left;
 }
 
@@ -28,7 +27,7 @@ body {
 }
 
 #word-by-icloak {
-   float:            right;
+   text-align:       right;
 }
 
 #word-messenger-chat {
