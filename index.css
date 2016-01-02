@@ -54,5 +54,6 @@ body {
 }
 
 #message-container {
-   left
+   /*left*/
+   font-size:        150%;
 }
