@@ -65,6 +65,16 @@ body {
    font-weight:      600;
 }
 
+/*.message-line {
+   padding:          15px;
+   margin:           15px;
+}*/
+
+/*#message-container tr {
+   padding:          5px;
+   margin:           5px;
+}*/
+
 #message-container tr td:nth-child(2) {
    border-radius:    10px;
    display:          inline-block;
@@ -81,5 +91,7 @@ body {
    color:            #E0E0E0;
 }
 
+#message-input {
 
+}
 
