@@ -7,14 +7,12 @@ body {
 
 #panel {
    height:           10%;
-   min-height:       60px;
    width:            100%;
    /*border-style:     solid;*/
 }
 
 #messanger-img {
    float:            left;
-   max-height:       50px;
 }
 
 #branding {
