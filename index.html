@@ -28,7 +28,7 @@
 <div id='messanger' ng-controller='messages'>
    <table id='message-container'>
       <tr ng-repeat="x in chat">
-         <td style='color: {{x.color}}'>
+         <td class='chatter-name' style='color: {{x.color}}'>
             {{ x.name }} :
          </td> 
          <td>{{ x.msg  }}</td>

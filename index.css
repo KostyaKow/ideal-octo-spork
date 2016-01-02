@@ -57,3 +57,29 @@ body {
    /*left*/
    font-size:        150%;
 }
+
+.chatter-name {
+   text-align:       right;
+   padding-left:     30px;
+   padding-right:    10px;
+   font-weight:      600;
+}
+
+#message-container tr td:nth-child(2) {
+   border-radius:    10px;
+   display:          inline-block;
+   padding:          5px;
+   margin:           5px;
+}
+
+#message-container tr:nth-child(odd) td:nth-child(2) {
+   background-color: #FFFFFF;
+   color:            #555555;
+}
+#message-container tr:nth-child(even) td:nth-child(2) {
+   background-color: #848484;
+   color:            #E0E0E0;
+}
+
+
+
