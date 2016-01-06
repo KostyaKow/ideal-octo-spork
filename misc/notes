@@ -41,6 +41,7 @@ directives = ng-directives
          A = Attribute
          C = class
          M = comment
+   ng-checked     = set check boxes
    ng-style       = set style dynamically
                   = "{true: {color: 'red'}, false: {}}[$first]"
    ng-class       = dynamically set css class
