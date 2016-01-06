@@ -41,6 +41,8 @@ directives = ng-directives
          A = Attribute
          C = class
          M = comment
+   ng-style       = set style dynamically
+                  = "{true: {color: 'red'}, false: {}}[$first]"
    ng-class       = dynamically set css class
                     <div ng-class='fdsf'>
                     <div class='ng-class:d;'>
@@ -51,7 +53,7 @@ expressions (also called data-binding expression)
    same as ng-bind (binds data to HTML)
 
    ternary
-      ="{'active' : $index == selectedEntry}"
+      ="$first ? 'firstRow' : 'nonFirstRow'"
 
    $even $odd $index
    filters {{ lastName | uppercase }}
@@ -67,11 +69,10 @@ expressions (also called data-binding expression)
       ="points[2]", etc.
    ng-init
       ='firstName="John"'
-      ="person{firstName:'John', lastName:'Doe'}"
+      ="person={firstName:'John', lastName:'Doe'}"
       ='points=[1, 2, 3]'
 
 js
-   ng-class="{'active' : $index == selectedEntry}"
    object = angular.copy(otherObject);
    lowercase(); uppercase(), isString(), isNumber()
    //[] can be used for dependent modules
