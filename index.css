@@ -1,21 +1,26 @@
 
 body {
    top-margin:       0px;
+   margin:           0px;
    font-family:      Ubuntu, sans-serif;
 }
 
 #panel {
-   height:           10%;
+   padding-left:     20px;
+   /*max-height:       80px;*/
+   min-height:       60px;
+   height:           7%;
    width:            100%;
+   overflow:         hidden;
    /*border-style:     solid;*/
 }
 
 #messanger-img {
    float:            left;
+   max-height:       45px;
 }
 
 #branding {
-   width:            15%;
    float:            left;
 }
 
@@ -23,11 +28,10 @@ body {
    font-size:        150%;
    color:            #fe9542;
    float:            right;
-
 }
 
 #word-by-icloak {
-   float:            right;
+   text-align:       right;
 }
 
 #word-messenger-chat {
@@ -42,3 +46,52 @@ body {
    display:          inline-block;
    float:            none;
 }
+
+#messanger {
+   background-color: #293C4D;
+   width:            100%;
+   height:           100%;
+}
+
+#message-container {
+   /*left*/
+   font-size:        150%;
+}
+
+.chatter-name {
+   text-align:       right;
+   padding-left:     30px;
+   padding-right:    10px;
+   font-weight:      600;
+}
+
+/*.message-line {
+   padding:          15px;
+   margin:           15px;
+}*/
+
+/*#message-container tr {
+   padding:          5px;
+   margin:           5px;
+}*/
+
+#message-container tr td:nth-child(2) {
+   border-radius:    10px;
+   display:          inline-block;
+   padding:          5px;
+   margin:           5px;
+}
+
+#message-container tr:nth-child(odd) td:nth-child(2) {
+   background-color: #FFFFFF;
+   color:            #555555;
+}
+#message-container tr:nth-child(even) td:nth-child(2) {
+   background-color: #848484;
+   color:            #E0E0E0;
+}
+
+#message-input {
+
+}
+
