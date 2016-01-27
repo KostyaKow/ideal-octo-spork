@@ -50,6 +50,7 @@ directives = ng-directives
                     <div ng-class="{'active' : $index == selectedEntry}">
                     <div ng-class="[getClass(entry.category), 'favStar']"
 
+
 expressions (also called data-binding expression)
    same as ng-bind (binds data to HTML)
 
@@ -74,6 +75,8 @@ expressions (also called data-binding expression)
       ='points=[1, 2, 3]'
 
 js
+   $apply = http://stackoverflow.com/questions/15475601/angularjs-ng-repeat-list-is-not-updated-when-a-model-element-is-spliced-from-t
+
    object = angular.copy(otherObject);
    lowercase(); uppercase(), isString(), isNumber()
    //[] can be used for dependent modules
