@@ -25,7 +25,7 @@ app.controller('messages', function($scope, $http) {
    $scope.messageInputValue = 0;
  
    //$scope.setUser(
-   $scope.chat = [
+   $scope.chat2 = [
       p1.mkMsg('Sup dude'),
       p2.mkMsg('Yo, what it do homie'),
       p1.mkMsg('nm just swagging you know how it b dawg'),
@@ -33,6 +33,16 @@ app.controller('messages', function($scope, $http) {
       p1.mkMsg('tru'),
       p3.mkMsg('Kawabunga'),
       p4.mkMsg('Sup bros')
+   ];
+
+   $scope.chat = [
+      p1.mkMsg('Hello'),
+      p2.mkMsg('Yo what\'s up'),
+      p1.mkMsg('not much, wbu'),
+      p1.mkMsg('tru'),
+      p3.mkMsg('Kawabunga'),
+      p3.mkMsg('Hell yeah'),
+      p2.mkMsg('Anyone still here?'),
    ];
 
    $scope.sendMessage = function() {
