@@ -47,6 +47,12 @@ body {
    float:            none;
 }
 
+#panel {
+   background-color: #ffffff;
+}
+body {
+   background-color: #293C4D;
+}
 #messanger {
    background-color: #293C4D;
    width:            100%;

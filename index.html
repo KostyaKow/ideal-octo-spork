@@ -11,6 +11,7 @@
 </head>
 <body ng-app='messanger'>
 
+
 <nav id='panel'>
    <img id='messanger-img' src='imgs/icon.jpg'></img>
 
@@ -19,7 +20,12 @@
          ONERING
       </div>
       <div id='word-by-icloak'>
-         by <b><!--ICLOAK-->RMS</b>
+         by
+         <b><!--ICLOAK--><!--RMS-->
+            <a href='https://github.com/rpasta42'>
+               <img id='github' style='width:25px; height:25px;' src='http://forty7.guru/do-not-move-this-files/git.svg'>
+            </a>
+         </b>
       </div>
    </div>
 
@@ -33,7 +39,7 @@
       <tr ng-repeat="x in chat">
          <td class='chatter-name' style='color: {{x.color}}'>
             {{ x.name }} :
-         </td> 
+         </td>
          <td>{{ x.msg  }}</td>
       </tr>
    </table>

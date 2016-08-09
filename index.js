@@ -23,7 +23,7 @@ app.controller('messages', function($scope, $http) {
    var p4 = new Chatter('PhoenixDown', '#00FF00');
 
    $scope.messageInputValue = 0;
- 
+
    //$scope.setUser(
    $scope.chat2 = [
       p1.mkMsg('Sup dude'),
@@ -37,16 +37,19 @@ app.controller('messages', function($scope, $http) {
 
    $scope.chat = [
       p1.mkMsg('Hello'),
-      p2.mkMsg('Yo what\'s up'),
-      p1.mkMsg('not much, wbu'),
-      p1.mkMsg('tru'),
+      p2.mkMsg('Hey what\'s up'),
+      p1.mkMsg('Not much, what about you'),
+      p2.mkMsg('true'),
+      p1.mkMsg('ok'),
       p3.mkMsg('Kawabunga'),
-      p3.mkMsg('Hell yeah'),
-      p2.mkMsg('Anyone still here?'),
+      p1.mkMsg('what?? who are you?'),
+      p3.mkMsg('I invade your chat'),
+      p1.mkMsg('Ok'),
+      p3.mkMsg('Anyone still here?')
    ];
 
    $scope.sendMessage = function() {
-      msg = p1.mkMsg($scope.messageValue); 
+      msg = p1.mkMsg($scope.messageValue);
       $scope.messageValue = '';
       $scope.chat.push(msg);
       //$http.get(url).then(function(response))
